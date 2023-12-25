@@ -1,0 +1,49 @@
+.App {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  input {
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  
+  .history {
+    margin-top: 20px;
+  }
+  
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .word {
+    display: flex;
+  }
+  
+  span {
+    margin: 0 5px;
+  }
+  
+  .correct-position {
+    color: green;
+  }
+  
+  .correct-letter {
+    color: yellow;
+  }
+  
+  .incorrect-letter {
+    color: red;
+  }
+  
+  .result {
+    font-weight: bold;
+  }
+  
