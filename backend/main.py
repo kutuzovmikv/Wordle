@@ -18,10 +18,8 @@ app.add_middleware(
 
 # Placeholder for the secret word
 five_letter_words = [
-    'APPLE', 'CHAIR', 'TIGER', 'WATER', 'GRASP',
-    'HAPPY', 'SUNNY', 'CLOUD', 'BEACH', 'WAVES',
-    'LUNCH', 'SWEET', 'WORLD', 'LEMON', 'PAPER',
-    'GRACE', 'BLISS', 'MUSIC', 'POWER', 'SHINE'
+    'КОЗЕЛ', 'ЗЕМЛЯ', 'СОСНА', 'ЗЕНИТ', 'ПОСОЛ', 'МОРОЗ', 'ВЕСНА', 'ВИЛКА', 'РЮМКА', 'ОСЕНЬ', 'ЛОЖКА', 'ПАЛЕЦ', 'ПУЛЬС',
+    'КОСТЬ', 'ГОСТЬ', 'ХВОСТ', 'ЧАШКА', 'МИЛКА'
 ]
 
 secret_word = random.choice(five_letter_words)
@@ -62,10 +60,10 @@ def guess_word(payload: GuessPayload):
     # Check if the word is completely correct
     if len(correct_positions) == 5:
         response["result"] = "success"
-        response["message"] = "Congratulations! You guessed the word."
+        response["message"] = "Ура! Вы угадали слово"
         secret_word = random.choice(five_letter_words)
     else:
         response["result"] = "fail"
-        response["message"] = "Try again"
+        response["message"] = "Неверное слово. Попробуйте еще раз"
 
     return response
